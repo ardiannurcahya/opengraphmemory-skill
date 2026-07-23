@@ -63,6 +63,10 @@ ogm_memory_get_episode
 ogm_memory_create_episode
 ogm_memory_append_attempt
 ogm_memory_record_outcome
+ogm_memory_feedback_episode
+ogm_memory_supersede_episode
+ogm_memory_feedback_pattern
+ogm_memory_supersede_pattern
 ```
 
 For example, a harness may expose `mcp_ogm_ogm_memory_search`; use the name shown by that runtime.
