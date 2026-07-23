@@ -1,25 +1,28 @@
 ---
 name: ogm-agent-memory
-description: "Agent Memory: recall verified prior experience before substantive bug fixes, planning, configuration, operations, research, or trading work; reorient during investigation when evidence changes; then record verified outcomes. Do not use for chat, trivial tasks, or unverified work."
+description: "Use for bug fixes, errors, failed tests/builds, deployments, migrations, MCP/opencode config, GitHub PR/merge/push work, documentation changes, repository operations, incidents, research, trading, or any non-trivial engineering task: search Agent Memory first, reorient when evidence changes, then record verified outcomes. Skip only greetings, simple facts, and trivial one-line edits."
 license: MIT
 compatibility: Requires an OpenGraphMemory Agent Memory API and the ogm-agent-bridge MCP server.
 ---
 
 # Agent Memory Workflow
 
-Use this skill as a three-phase workflow for substantive work: recall before planning, reorient only when investigation changes direction, and persist after verification. Its purpose is to reduce repeated investigation without allowing historical memory to override current evidence.
+Use this skill as a three-phase workflow for substantive work: recall before planning or implementation, reorient only when investigation changes direction, and persist after verification. Its purpose is to reduce repeated investigation without allowing historical memory to override current evidence.
+
+Default to using this skill for real work. If a task will likely involve code edits, repository operations, GitHub activity, deployment, configuration, documentation, tests, debugging, research, or operational decisions, search Agent Memory before acting. Do not wait for the user to explicitly mention memory.
 
 Use the registered `ogm` MCP Agent Memory tools. Runtime tool names may be prefixed by the MCP server; use the runtime-exposed equivalent of the operation names below.
 
 ## Recall Before Work
 
-Before planning or editing, search Agent Memory when the request is any of the following:
+Before planning, editing, deploying, merging, pushing, or diagnosing, search Agent Memory when the request is any of the following:
 
 - A bug, regression, error message, flaky test, failed build, migration, deployment, incident, performance issue, or configuration problem.
-- A task involving an unfamiliar subsystem, provider, dependency, repository, environment, or operational runbook.
-- A non-trivial implementation or design decision where previous verified solutions could shape the plan.
+- A task involving MCP, opencode configuration, skills, agents, plugins, GitHub, PR review, branch merge, push, release, CI, Docker, object storage, database migrations, or remote VPS operations.
+- A task involving an unfamiliar subsystem, provider, dependency, repository, environment, operational runbook, or production-like runtime.
+- A non-trivial implementation, documentation update, design decision, or repository cleanup where previous verified solutions could shape the plan.
 
-Skip recall for greetings, casual conversation, simple factual answers, obvious one-file edits, and tasks with no reusable technical context.
+Skip recall only for greetings, casual conversation, simple factual answers, obvious one-line edits, and tasks with no reusable technical context.
 
 ### Recall Protocol
 
@@ -54,7 +57,7 @@ If the configured profile denies writes, finish the user task normally and state
 
 ## Completion Protocol
 
-Run this protocol before the final user-facing response.
+Run this protocol before the final user-facing response for any completed substantive task.
 
 1. Search with `ogm_memory_search` before creating a record.
 2. Reuse a matching active episode when one exists; otherwise call `ogm_memory_create_episode` with a precise title, goal, domain, signature, safe scope, tags, and evidence references.

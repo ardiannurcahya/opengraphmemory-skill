@@ -2,7 +2,9 @@
 
 ## Recall
 
-Search Agent Memory before planning or editing for a concrete bug, failed test, provider/configuration issue, operational incident, migration, deployment, or unfamiliar subsystem.
+Search Agent Memory before planning or editing for a concrete bug, failed test, provider/configuration issue, operational incident, migration, deployment, MCP/opencode configuration, GitHub PR/merge/push work, documentation update, repository operation, or unfamiliar subsystem.
+
+Prefer searching for any non-trivial engineering task. Skip only greetings, simple facts, and obvious one-line edits with no reusable technical context.
 
 Use a short diagnostic query and narrow it with `problem_signature`, repository, and environment when known. Retrieve three to five results at most.
 

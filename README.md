@@ -12,7 +12,7 @@ Hermes ------/
 
 ## What It Does
 
-- Recalls relevant historical episodes before bug fixes, incident response, configuration changes, and non-trivial planning.
+- Recalls relevant historical episodes before bug fixes, incident response, deployments, migrations, MCP/opencode configuration, GitHub PR/merge/push work, documentation changes, and non-trivial planning.
 - Uses prior memory as an investigation hypothesis, never as a substitute for current verification.
 - Searches again only after a meaningful change in evidence or subsystem.
 - Stores reusable outcomes with actual test, build, CI, or runtime verifiers.
@@ -46,7 +46,7 @@ Configure the MCP bridge first, then install `SKILL.md` into the harness skill l
 
 ## Workflow
 
-1. **Recall** before a substantive bug fix, investigation, configuration task, or plan.
+1. **Recall** before a substantive bug fix, investigation, deployment, migration, MCP/opencode configuration task, GitHub operation, documentation change, or plan.
 2. **Reorient** only when new evidence invalidates the initial hypothesis or introduces a distinct subsystem.
 3. **Persist** after a reusable result is verified.
 
