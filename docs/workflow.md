@@ -32,6 +32,18 @@ When work has a reusable, verified conclusion:
 
 Use `success` only for a verified result. Use `partial` when a local fix is complete but an external provider, production check, or deployment remains unresolved.
 
+## Domain Selection
+
+Choose the memory episode domain based on the final reusable lesson:
+
+- `engineering`: implementation, build/test, deployment, migration, infrastructure, MCP/opencode config, GitHub, CI, Docker, database, and production debugging lessons.
+- `research`: research, comparison, design exploration, or knowledge-gathering lessons.
+- `trading`: market, strategy, trade review, backtest, risk, execution, or portfolio lessons.
+- `operations`: incident, runbook, monitoring, backup/restore, maintenance, server administration, or credential-rotation lessons.
+- `custom`: anything substantive outside those categories; include explicit scope metadata.
+
+If multiple domains apply, choose the one that best describes what should be retrieved later.
+
 ## Example
 
 ```text

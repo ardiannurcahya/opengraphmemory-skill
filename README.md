@@ -52,6 +52,16 @@ Configure the MCP bridge first, then install `SKILL.md` into the harness skill l
 
 See [workflow details](docs/workflow.md) and [security guidance](docs/security.md).
 
+## Domains
+
+Agent Memory episodes use one of five domains:
+
+- `engineering`: code, tests, builds, deployments, migrations, infrastructure, MCP/opencode config, GitHub, CI, Docker, and databases.
+- `research`: technical research, vendor/tool comparison, design exploration, and knowledge gathering.
+- `trading`: market analysis, strategy, trade review, risk decisions, backtests, and portfolio workflow.
+- `operations`: incidents, runbooks, monitoring, backup/restore, maintenance, remote servers, and credential rotation.
+- `custom`: substantive work that does not fit another domain.
+
 ## Tool Contract
 
 The skill expects these logical MCP operations. Harnesses may prefix their runtime names:

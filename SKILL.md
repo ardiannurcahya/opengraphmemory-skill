@@ -55,6 +55,18 @@ Do not record greetings, casual conversation, trivial edits, unfinished work, un
 
 If the configured profile denies writes, finish the user task normally and state briefly that memory was not persisted. Do not ask for more privileges unless persistence is central to the request.
 
+## Domain Selection
+
+Choose the `domain` for `ogm_memory_create_episode` from the task type, not from the repository language:
+
+- `engineering`: code changes, tests, builds, deployments, migrations, infrastructure, MCP/opencode config, GitHub PR/merge/push work, CI, Docker, databases, and production debugging.
+- `research`: technical research, vendor/tool comparison, literature review, knowledge gathering, design exploration, and investigation where the main output is understanding rather than a deployed change.
+- `trading`: market analysis, trading strategy, trade review, risk decisions, backtest investigation, portfolio workflow, and execution lessons.
+- `operations`: incident response, runbooks, monitoring, backup/restore, maintenance windows, remote server administration, credential rotation, and recurring operational procedures.
+- `custom`: substantive work that does not fit the other domains. Add a clear `scope` field so future search can recover it.
+
+When a task spans multiple domains, pick the domain of the final reusable lesson. For example, fixing a deployment script is `engineering`; writing an incident runbook from the fix is `operations`; comparing three object stores is `research`.
+
 ## Completion Protocol
 
 Run this protocol before the final user-facing response for any completed substantive task.
